@@ -1,0 +1,1 @@
+document.querySelector('a[class="gem-c-button govuk-button govuk-button--start"]').click()

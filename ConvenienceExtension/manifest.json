@@ -1,0 +1,31 @@
+{
+    "name": "Convenience Extension",
+    "description": "Convenience extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.reddit.com/*"],
+            "js": ["reddit.js"]
+        },
+        {
+            "matches": ["https://www.mp4upload.com/*"],
+            "js": ["mp4upload.js"]
+        },
+        {
+            "matches": ["https://x.com/*"],
+            "js": ["twitter.js"]
+        },
+        {
+            "matches": ["https://www.youtube.com/watch?v=*"],
+            "js": ["youtube.js"]
+        },
+        {
+            "matches": ["<all_urls>"],
+            "js": ["shortlinks.js"]
+        }
+    ]
+}

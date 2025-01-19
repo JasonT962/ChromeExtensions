@@ -1,0 +1,24 @@
+{
+    "name": "Driving Test Booking Autofill",
+    "description": "Let's you save and autofill info for booking driving test",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.gov.uk/book-driving-test"],
+            "js": ["startnow.js"]
+        },
+
+        {
+            "matches": ["https://driverpracticaltest.dvsa.gov.uk/application*"],
+            "js": ["script.js"]
+        }
+    ],
+    "permissions": ["storage", "activeTab", "declarativeContent"]
+}
